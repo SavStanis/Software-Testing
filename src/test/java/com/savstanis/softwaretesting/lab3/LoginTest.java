@@ -1,5 +1,6 @@
 package com.savstanis.softwaretesting.lab3;
 
+
 import com.savstanis.softwaretesting.lab3.pages.AuthPage;
 import com.savstanis.softwaretesting.lab3.pages.MainPage;
 import org.junit.After;

@@ -1,7 +1,7 @@
 package com.savstanis.softwaretesting.lab3;
 
+
 import com.savstanis.softwaretesting.lab3.pages.MainPage;
-import com.savstanis.softwaretesting.lab3.pages.PrivacyPolicyPage;
 import com.savstanis.softwaretesting.lab3.pages.TermsAndConditionsPage;
 import org.junit.After;
 import org.junit.Before;
