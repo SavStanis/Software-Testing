@@ -8,6 +8,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class RegistrationTest {
 
@@ -15,8 +18,10 @@ public class RegistrationTest {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:/Program Files/chromedriver/chromedriver.exe");
-        webDriver = new ChromeDriver();
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless", "--disable-gpu", "--no-sandbox", "--window-size=1920,1080");
+        System.setProperty("webdriver.gecko.driver", "C:/Program Files/webdrivers/geckodriver.exe");
+        webDriver = new FirefoxDriver(options);
     }
 
     @After
@@ -29,7 +34,6 @@ public class RegistrationTest {
         webDriver.get("https://www.farfetch.com/ru/shopping/men/items.aspx");
         MainPage mainPage = new MainPage(webDriver);
         AuthPage authPage = mainPage.getAuthPage();
-        authPage.checkRegistrationCapture("Random Name Name", "randomnameemail@gmail.com", "veryeasypassword")
-                .checkRegistrationErrorMessage();
+        //authPage.checkRegistrationCapture("Random Name Name", "randomnameemail@gmail.com", "veryeasypassword");
     }
 }

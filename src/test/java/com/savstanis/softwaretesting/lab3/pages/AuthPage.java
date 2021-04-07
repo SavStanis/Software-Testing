@@ -46,7 +46,7 @@ public class AuthPage {
         WebElement emailField = driver.findElement(By.id("login-password"));
         emailField.sendKeys(password);
 
-        driver.findElement(By.xpath("//*[@id=\"tabs--6--panel--0\"]/form/div[4]/button")).click();
+        //driver.findElement(By.xpath("//*[@id=\"tabs--6--panel--0\"]/form/div[4]/button")).click();
 
         return this;
     }
