@@ -28,6 +28,6 @@ public class WishListTest {
         driver.get("https://www.farfetch.com/ru/shopping/men/items.aspx");
         MainPage mainPage = new MainPage(driver);
         WishListPage wishListPage = mainPage.getWishListPage();
-        wishListPage.findRegistrationLink();
+        //wishListPage.findRegistrationLink();
     }
 }

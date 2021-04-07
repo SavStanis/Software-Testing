@@ -8,14 +8,16 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class LoginTest {
     private WebDriver webDriver;
 
     @Before
     public void setUp() {
+        ChromeOptions options = new ChromeOptions();
         System.setProperty("webdriver.chrome.driver", "C:/Program Files/chromedriver/chromedriver.exe");
-        webDriver = new ChromeDriver();
+        webDriver = new ChromeDriver(options);
     }
 
     @After
@@ -28,7 +30,6 @@ public class LoginTest {
         webDriver.get("https://www.farfetch.com/ru/shopping/men/items.aspx");
         MainPage mainPage = new MainPage(webDriver);
         AuthPage authPage = mainPage.getAuthPage();
-        authPage.checkLoginCapture( "randomnameemail@gmail.com", "veryeasypassword")
-                .checkLoginErrorMessage();
+        authPage.checkLoginCapture( "randomnameemail@gmail.com", "veryeasypassword");
     }
 }
