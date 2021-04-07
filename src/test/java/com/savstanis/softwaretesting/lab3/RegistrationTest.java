@@ -15,6 +15,7 @@ public class RegistrationTest {
 
     @Before
     public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "C:/Program Files/chromedriver/chromedriver.exe");
         webDriver = new ChromeDriver();
     }
 
