@@ -1,0 +1,9 @@
+[Thu May 06 02:58:21 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1
+[Thu May 06 02:59:11 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1
+[Thu May 06 02:59:51 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1
+[Thu May 06 03:00:49 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1
+[Thu May 06 03:01:24 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1
+[Thu May 06 03:03:26 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1
+[Thu May 06 03:04:04 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1
+[Thu May 06 03:04:42 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1
+[Thu May 06 03:05:03 EEST 2021] - Status: INFO; Results: Different rows: 1; Missing rows: 0; Extra rows: 1

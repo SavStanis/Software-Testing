@@ -30,11 +30,12 @@ public class MainTests {
 
     @Test
     public void createUser_userShouldBeCreated() {
-        User user = new User("Name", "email@mail.com", "Male", "Active");
+        User user = new User("Name", "email4@mail.com", "Male", "Active");
 
         new UserEndpoint()
                 .createUser(user, System.getenv("ACCESS_TOKEN"))
                 .then()
+                .log().body()
                 .assertThat()
                 .statusCode(200);
     }
@@ -54,7 +55,7 @@ public class MainTests {
     public void deleteUser_authFailed() {
         User user = new User("Name", "email@mail.com", "Male", "Active");
 
-        Response baseResponse = new UserEndpoint().deleteUser("1666", "");
+        Response baseResponse = new UserEndpoint().deleteUser("1403", "");
 
         JsonPath jsonPath = baseResponse.jsonPath();
         Assert.assertEquals( 401, jsonPath.getInt("code"));
