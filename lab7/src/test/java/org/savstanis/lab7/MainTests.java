@@ -57,7 +57,6 @@ public class MainTests {
     @Test
     public void deleteUser_authFailed() {
         User user = new User("Name", "email@mail.com", "Male", "Active");
-
         Response baseResponse = new UserEndpoint().deleteUser("1403", "");
 
         JsonPath jsonPath = baseResponse.jsonPath();
