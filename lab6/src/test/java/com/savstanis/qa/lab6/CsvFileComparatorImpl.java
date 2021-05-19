@@ -20,15 +20,15 @@ public class CsvFileComparatorImpl implements CsvFileComparator {
 
         if (actualFileRows.size() == 0) {
             log("FAIL", "Actual file is empty", testResultsFolder);
-            return;
+            throw new RuntimeException();
         }
         if (expectedFileRows.size() == 0) {
             log("FAIL", "Expected file is empty", testResultsFolder);
-            return;
+            throw new RuntimeException();
         }
         if (!expectedFileRows.get(0).equals(actualFileRows.get(0))) {
             log("FAIL", "Structures of files are different", testResultsFolder);
-            return;
+            throw new RuntimeException();
         }
 
         List<String> headers = new ArrayList<>(Arrays.asList(expectedFileRows.get(0).split(",")));
@@ -55,7 +55,8 @@ public class CsvFileComparatorImpl implements CsvFileComparator {
                 differenceList.add(expectedRow + "," + actualRow);
             }
         }
-        String logMessage = "Different rows: " + differenceList.size()
+        String logMessage = "Equals rows: " + (rowsAmount - differenceList.size())
+                + "; Different rows: " + differenceList.size()
                 + "; Missing rows: " + missingRows
                 + "; Extra rows: " + extraRows;
 
